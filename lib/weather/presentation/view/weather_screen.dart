@@ -93,7 +93,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               10.heightBox,
                               Text(
                                 cubit.weatherEntity?.weather.first.description??"",
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.black,
                                   fontSize: 22,
                                 ),
