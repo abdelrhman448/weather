@@ -111,7 +111,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               Center(
                                 child: Text(
                                     cubit.failure?.message??"",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.w500,
                                   ),
