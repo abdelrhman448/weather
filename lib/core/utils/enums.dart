@@ -1,0 +1,1 @@
+enum ResponseType { post, get, put, delete, }
