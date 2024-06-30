@@ -5,7 +5,8 @@ import 'package:weather/weather/domain/usecases/get_weather_by_country.dart';
 
 final sl=GetIt.instance;
 
-class ServiceLocator{
+class ServiceLocator {
+
     init(){
       sl.registerLazySingleton(()=>RemoteDataSource());
       sl.registerLazySingleton(()=>WeatherRepository(sl<RemoteDataSource>()));

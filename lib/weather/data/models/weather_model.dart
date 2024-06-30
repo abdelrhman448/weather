@@ -14,12 +14,10 @@ class WeatherModel extends WeatherEntity{
   );
 
   factory WeatherModel.fromJson(Map<String, dynamic> json) => WeatherModel(
-
     weather: List<Weather>.from(json["weather"].map((x) => Weather.fromJson(x))),
     main: Main.fromJson(json["main"]),
     timezone: json["timezone"],
     name: json["name"],
-
   );
 
 

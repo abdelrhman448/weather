@@ -16,10 +16,8 @@ class RemoteDataSource implements BaseRemoteDataSource {
   Future<Either<FailureModel,WeatherEntity>> getWeatherByCountryName(String countryName) async {
     try {
       final serverValue = await HttpHelper().callService(
-        url: '${AppConstance.baseUrl}/weather?q=$countryName&appid=${AppConstance.appKey}',
-        responseType: ResponseType.get,
+        url: '${AppConstance.baseUrl}/weather?q=$countryName&appid=${AppConstance.appKey}', responseType: ResponseType.get,
       );
-      print(serverValue);
       return Right(WeatherModel.fromJson(serverValue));
     } catch (e) {
       if(e is NotFoundException) {
